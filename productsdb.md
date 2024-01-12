@@ -383,6 +383,9 @@
 >db.products.find({ product_price: { $gte: 400, $lte: 800 } }, { _id: 0, product_price: 1 }).pretty()
 ```
 ### Find the product price which are not between 400 to 600
+```bash
+>db.products.find({ product_price: { $lt: 400, $gt: 600 } }, { _id: 0, product_price: 1 }).pretty()
+```
 ### List the four product which are grater than 500 in price
 ```bash
 >db.products.find({product_price:{"$gt":500}}).pretty()
@@ -405,7 +408,7 @@
 ```
 ### Find products which contain product color indigo and product price 492.00
 ```bash
->db.products.find({ product_color: "indigo", product_price: 492.00 })
+>db.products.find({ product_color: "indigo", product_price: 492.00 }).pretty()
 ```
 ### Delete the products which product price value are same
 ```bash
